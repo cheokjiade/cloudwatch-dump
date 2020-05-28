@@ -142,7 +142,7 @@ def main():
     """
     Main function
     """
-    statistics_list = ['Average', 'Sum']
+    statistics_list = ['Average', 'Sum', 'Maximum']
 
     # get command line arguments
     options, args = parse_args()
