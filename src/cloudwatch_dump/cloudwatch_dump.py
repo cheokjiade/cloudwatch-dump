@@ -57,7 +57,7 @@ def metric_to_tag(metric, statistics, ec2_names):
         # replace slash for whisper safety
         buf += ('root' if s == '/' else ec2_names.get(s, s).replace('/', '_') for s in x[1])
     buf.append(metric.name)
-    return '.'.join(buf)
+    return '.'.join(buf).replace(" ", '')
 
 
 def get_metric_statistics(metric, start_time, end_time, statistics, unit, period):
